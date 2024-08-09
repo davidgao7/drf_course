@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+
 import os
 import sys
+
+# Calculate the project root directory (one level up from manage.py)
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Add the project root directory to sys.path
+sys.path.append(project_root)
 
 
 def main():
