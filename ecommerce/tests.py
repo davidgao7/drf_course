@@ -1,5 +1,3 @@
-# Create your tests here.
-
 from django.contrib.auth.models import User
 from ecommerce.models import Item, Order
 from rest_framework.authtoken.models import Token
