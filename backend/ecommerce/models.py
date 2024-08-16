@@ -64,10 +64,8 @@ class Order(TimeStampedModel, ActivatorModel, Model):
         verbose_name_plural = "Orders"
         ordering = ["id"]
 
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=True, blank=True)
-    item = models.ForeignKey(
-        Item, null=True, blank=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    item = models.ForeignKey(Item, null=True, blank=True, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=0)
 
     def __str__(self):
